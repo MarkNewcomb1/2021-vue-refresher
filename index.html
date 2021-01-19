@@ -11,8 +11,12 @@
   <body>
     <div id="app">
       <div class="nav-bar"></div>
-
+      <!-- This is inside of #app, that's why the mustache syntax works here -->
       <div class="cart">Cart({{ cart.length }})</div>
+      <!-- This is the parent app. It receives a prop "premium" from main.js
+      with a shorthand for v-bind, :premium, and @add-to-cart is an event listener
+      for an emit that happens in the component. Here, it triggers the updateCart
+      method that lives in main.js. -->
       <product-display :premium="premium" @add-to-cart="updateCart"></product-display>
     </div>
 

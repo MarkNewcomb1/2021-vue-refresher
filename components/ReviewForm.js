@@ -63,3 +63,10 @@ app.component('review-form', {
     }
   }
 })
+
+// v-bind is one-way data-binding, from the data to the template. 
+// But for forms we need two-way data binding, binding FROM the 
+// template to the data. This means v-model.
+
+// When a user inputs their name into the input field, you want to record
+// and store that data. v-model accomplishes this. 

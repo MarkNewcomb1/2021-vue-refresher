@@ -1,4 +1,5 @@
 app.component('product-display', {
+    // this is where you declare props you receive
   props: {
     premium: {
       type: Boolean,
@@ -67,6 +68,9 @@ app.component('product-display', {
         this.reviews.push(review)
       }
   },
+    // properties you can add to a Vue app that computes values - 
+  // it keeps computational logic out of the template. And it's
+  // performant, because it caches the value. 
   computed: {
       title() {
           return this.brand + ' ' + this.product
